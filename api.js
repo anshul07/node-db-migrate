@@ -2,7 +2,8 @@
 
 var load = require('./lib/commands');
 var log = require('db-migrate-shared').log;
-require('pkginfo')(module, 'version'); // jshint ignore:line
+module.exports.version = require('./package.json').version;
+
 var Promise;
 var onComplete = load('on-complete');
 
